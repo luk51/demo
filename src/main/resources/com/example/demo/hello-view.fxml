@@ -24,6 +24,9 @@
         <children>
             <Label fx:id="cell_00">
             <style>
+                -fx-font-size: 30;
+                -fx-alignment: center;
+                -fx-text-alignment: center;
                 -fx-pref-column-count: 3;
                 -fx-pref-row-count: 3;
                 -fx-border-color:black;
