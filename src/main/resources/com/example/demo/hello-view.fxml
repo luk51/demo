@@ -7,13 +7,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Cell?>
 <?import javafx.scene.layout.HBox?>
-<VBox stylesheets="@hello-view.css"  alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<VBox stylesheets="@hello-view.css" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.demo.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-
+    <VBox>
+        <style>
+            -fx-spacing: 10;
+        </style>
     <HBox>
         <style>
             -fx-spacing: 10;
@@ -21,7 +24,9 @@
         <children>
             <Label fx:id="cell_00">
             <style>
-            -fx-border-color:black;
+                -fx-pref-column-count: 3;
+                -fx-pref-row-count: 3;
+                -fx-border-color:black;
             -fx-border-width: 1;
             -fx-border-style: solid;
             -fx-min-height: 48;
@@ -66,5 +71,271 @@
             </Label>
         </children>
     </HBox>
+
+        <HBox>
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <children>
+                <Label fx:id="cell_05">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_06">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_07">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_08">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_09">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox>
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <children>
+                <Label fx:id="cell_10">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_11">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_12">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_13">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_14">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox>
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <children>
+                <Label fx:id="cell_15">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_16">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_17">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_18">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_19">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox>
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <children>
+                <Label fx:id="cell_20">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_21">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_22">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_23">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_24">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox>
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <children>
+                <Label fx:id="cell_25">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_26">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_27">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_28">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+                <Label fx:id="cell_29">
+                    <style>
+                        -fx-border-color:black;
+                        -fx-border-width: 1;
+                        -fx-border-style: solid;
+                        -fx-min-height: 48 ;
+                        -fx-min-width: 48;
+                    </style>
+                </Label>
+            </children>
+        </HBox>
+    </VBox>
 
 </VBox>
