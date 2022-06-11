@@ -16,6 +16,9 @@
     <Label fx:id="welcomeText" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" />
 
     <HBox>
+        <style>
+            -fx-spacing: 10;
+        </style>
         <children>
             <Label fx:id="cell_00">
                 <style>
