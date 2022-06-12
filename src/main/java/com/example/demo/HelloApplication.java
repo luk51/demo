@@ -17,6 +17,8 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         scene.getRoot().requestFocus();
         stage.setTitle("wordle game");
+        stage.setMinWidth(1024);
+        stage.setMinHeight(600);
         logger.info("wordle gestartet");
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
