@@ -38,6 +38,11 @@
             </Label>
             <Label fx:id="cell_01">
                 <style>
+                    -fx-font-size: 30;
+                    -fx-alignment: center;
+                    -fx-text-alignment: center;
+                    -fx-pref-column-count: 3;
+                    -fx-pref-row-count: 3;
                     -fx-border-color:black;
                     -fx-border-width: 1;
                     -fx-border-style: solid;
@@ -47,28 +52,43 @@
             </Label>
             <Label fx:id="cell_02">
                 <style>
+                    -fx-font-size: 30;
+                    -fx-alignment: center;
+                    -fx-text-alignment: center;
+                    -fx-pref-column-count: 3;
+                    -fx-pref-row-count: 3;
                     -fx-border-color:black;
                     -fx-border-width: 1;
                     -fx-border-style: solid;
-                    -fx-min-height: 48 ;
+                    -fx-min-height: 48;
                     -fx-min-width: 48;
                 </style>
             </Label>
             <Label fx:id="cell_03">
                 <style>
+                    -fx-font-size: 30;
+                    -fx-alignment: center;
+                    -fx-text-alignment: center;
+                    -fx-pref-column-count: 3;
+                    -fx-pref-row-count: 3;
                     -fx-border-color:black;
                     -fx-border-width: 1;
                     -fx-border-style: solid;
-                    -fx-min-height: 48 ;
+                    -fx-min-height: 48;
                     -fx-min-width: 48;
                 </style>
             </Label>
             <Label fx:id="cell_04">
                 <style>
+                    -fx-font-size: 30;
+                    -fx-alignment: center;
+                    -fx-text-alignment: center;
+                    -fx-pref-column-count: 3;
+                    -fx-pref-row-count: 3;
                     -fx-border-color:black;
                     -fx-border-width: 1;
                     -fx-border-style: solid;
-                    -fx-min-height: 48 ;
+                    -fx-min-height: 48;
                     -fx-min-width: 48;
                 </style>
             </Label>
@@ -82,6 +102,11 @@
             <children>
                 <Label fx:id="cell_05">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -91,6 +116,11 @@
                 </Label>
                 <Label fx:id="cell_06">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -100,28 +130,43 @@
                 </Label>
                 <Label fx:id="cell_07">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_08">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_09">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
@@ -135,6 +180,11 @@
             <children>
                 <Label fx:id="cell_10">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -144,6 +194,11 @@
                 </Label>
                 <Label fx:id="cell_11">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -153,28 +208,43 @@
                 </Label>
                 <Label fx:id="cell_12">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_13">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_14">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
@@ -188,6 +258,11 @@
             <children>
                 <Label fx:id="cell_15">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -197,6 +272,11 @@
                 </Label>
                 <Label fx:id="cell_16">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -206,28 +286,43 @@
                 </Label>
                 <Label fx:id="cell_17">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_18">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_19">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
@@ -241,6 +336,11 @@
             <children>
                 <Label fx:id="cell_20">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -250,6 +350,11 @@
                 </Label>
                 <Label fx:id="cell_21">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -259,28 +364,43 @@
                 </Label>
                 <Label fx:id="cell_22">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_23">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_24">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
@@ -294,6 +414,11 @@
             <children>
                 <Label fx:id="cell_25">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -303,6 +428,11 @@
                 </Label>
                 <Label fx:id="cell_26">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
@@ -312,28 +442,43 @@
                 </Label>
                 <Label fx:id="cell_27">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_28">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
                 <Label fx:id="cell_29">
                     <style>
+                        -fx-font-size: 30;
+                        -fx-alignment: center;
+                        -fx-text-alignment: center;
+                        -fx-pref-column-count: 3;
+                        -fx-pref-row-count: 3;
                         -fx-border-color:black;
                         -fx-border-width: 1;
                         -fx-border-style: solid;
-                        -fx-min-height: 48 ;
+                        -fx-min-height: 48;
                         -fx-min-width: 48;
                     </style>
                 </Label>
