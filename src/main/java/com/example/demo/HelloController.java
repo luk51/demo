@@ -83,30 +83,60 @@ public class HelloController implements Initializable {
 
     @FXML
     protected void onRootVBoxPressed(KeyEvent key) {
-        logger.info(cell_00.toString());
-        if (counter < 30) {
-            for (int i = 0; i < 30; i++) {
-                cells.get(i).setStyle("""
-                                      -fx-font-size: 30;
-                                                -fx-alignment: center;
-                                                -fx-text-alignment: center;
-                                                -fx-pref-column-count: 3;
-                                                -fx-pref-row-count: 3;
-                                                -fx-border-color:black;
-                                                -fx-border-width: 1;
-                                                -fx-border-style: solid;
-                                                -fx-min-height: 48;
-                                                -fx-min-width: 48;
-                        -fx-background-color: yellow;
-                        """);
+        String keyText = key.getCode().getName();
+        logger.info("das ist keytext: " + keyText);
+        if (keyText.equals("Backspace")) {
+            // do nothing
+            logger.info("es wurde backspace gedrückt");
+            if (counter > 0) {
+                counter--;
+                for (int i = 0; i < 30; i++) {
+                    cells.get(i).setStyle("""
+                                          -fx-font-size: 30;
+                                                    -fx-alignment: center;
+                                                    -fx-text-alignment: center;
+                                                    -fx-pref-column-count: 3;
+                                                    -fx-pref-row-count: 3;
+                                                    -fx-border-color:black;
+                                                    -fx-border-width: 1;
+                                                    -fx-border-style: solid;
+                                                    -fx-min-height: 48;
+                                                    -fx-min-width: 48;
+                            -fx-background-color: yellow;
+                            """);
+                }
+                Label currentCell = cells.get(counter);
+                currentCell.setText("");
+                currentCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
             }
-            Label currentCell = cells.get(counter);
-            currentCell.setText(key.getText());
-            if (counter < 29) {
-                Label nextCell = cells.get(counter + 1);
-                nextCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
+        }
+        else {
+            if (counter < 30) {
+
+
+                for (int i = 0; i < 30; i++) {
+                    cells.get(i).setStyle("""
+                                          -fx-font-size: 30;
+                                                    -fx-alignment: center;
+                                                    -fx-text-alignment: center;
+                                                    -fx-pref-column-count: 3;
+                                                    -fx-pref-row-count: 3;
+                                                    -fx-border-color:black;
+                                                    -fx-border-width: 1;
+                                                    -fx-border-style: solid;
+                                                    -fx-min-height: 48;
+                                                    -fx-min-width: 48;
+                            -fx-background-color: yellow;
+                            """);
+                }
+                Label currentCell = cells.get(counter);
+                currentCell.setText(key.getText());
+                if (counter < 29) {
+                    Label nextCell = cells.get(counter + 1);
+                    nextCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
+                }
+                counter++;
             }
-            counter++;
         }
     }
 
