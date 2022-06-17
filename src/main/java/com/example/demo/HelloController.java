@@ -97,6 +97,7 @@ public class HelloController implements Initializable {
 
     @FXML
     protected void onRootVBoxKeyPressed(KeyEvent key) {
+
         String keyText = key.getCode().getName();
         logger.info("das ist keytext: " + keyText);
         if (keyText.equals("Backspace")) {
@@ -106,7 +107,6 @@ public class HelloController implements Initializable {
             }
             Label currentCell = cells.get(counter);
             currentCell.setText("");
-            currentCell.setStyle(styleBlue);
 
         } else if (counter < 30) {
             if (counter == 0 || counter % 5 != 0) {
@@ -114,12 +114,28 @@ public class HelloController implements Initializable {
                 currentCell.setText(key.getText());
                 if (counter < 29) {
                     Label nextCell = cells.get(counter);
-                    nextCell.setStyle(styleBlue);
                 }
                 counter++;
             }
         }
+        renderColors();
 
+
+    }
+
+    private void renderColors() {
+        // render the colors
+        cells.forEach(cell -> {
+            cell.setStyle(styleYellow);
+        });
+        for (int i = 0; i < 5; i++) {
+            int toBeColoredIndex = counter - counter % 5 + i;
+            Label toBeColored = cells.get(toBeColoredIndex);
+            toBeColored.setStyle(styleLightBlue);
+        }
+        if (counter > 0) {
+            cells.get(counter - 1).setStyle(styleBlue);
+        }
     }
 
     @Override
@@ -156,12 +172,8 @@ public class HelloController implements Initializable {
         cells.add(cell_28);
         cells.add(cell_29);
 
-        for (int i = 0; i < 30; i++) {
-            Label currentCell = cells.get(i);
-            currentCell.setStyle(styleYellow);
-        }
         counter = 0;
-
+        renderColors();
 
     }
 }
