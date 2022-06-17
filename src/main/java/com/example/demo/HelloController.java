@@ -14,8 +14,23 @@ public class HelloController implements Initializable {
 
     java.util.logging.Logger logger = java.util.logging.Logger.getLogger(this.getClass().getName());
 
-    @FXML
-    private Label welcomeText;
+    static final String styleCell = """
+                    -fx-font-size: 30;
+                    -fx-alignment: center;
+                    -fx-text-alignment: center;
+                    -fx-pref-column-count: 3;
+                    -fx-pref-row-count: 3;
+                    -fx-border-color:black;
+                    -fx-border-width: 1;
+                    -fx-border-style: solid;
+                    -fx-min-height: 48;
+                    -fx-min-width: 48;
+                    """;
+
+    private final static String styleYellow = styleCell + "-fx-background-color: yellow";
+    private static final String styleBlue = styleCell + "-fx-background-color: blue";
+    private static final String styleLightBlue = styleCell + "-fx-background-color: aqua";
+
     @FXML
     private Label cell_00;
     @FXML
@@ -85,60 +100,26 @@ public class HelloController implements Initializable {
         String keyText = key.getCode().getName();
         logger.info("das ist keytext: " + keyText);
         if (keyText.equals("Backspace")) {
-            // do nothing
             logger.info("es wurde backspace gedrückt");
             if (counter > 0) {
                 counter--;
-                for (int i = 0; i < 30; i++) {
-                    cells.get(i).setStyle("""
-                                          -fx-font-size: 30;
-                                                    -fx-alignment: center;
-                                                    -fx-text-alignment: center;
-                                                    -fx-pref-column-count: 3;
-                                                    -fx-pref-row-count: 3;
-                                                    -fx-border-color:black;
-                                                    -fx-border-width: 1;
-                                                    -fx-border-style: solid;
-                                                    -fx-min-height: 48;
-                                                    -fx-min-width: 48;
-                            -fx-background-color: yellow;
-                            """);
-                }
-                Label currentCell = cells.get(counter);
-                currentCell.setText("");
-                currentCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
             }
+            Label currentCell = cells.get(counter);
+            currentCell.setText("");
+            currentCell.setStyle(styleBlue);
+
         } else if (counter < 30) {
             if (counter == 0 || counter % 5 != 0) {
-                for (int i = 0; i < 30; i++) {
-                    cells.get(i).setStyle("""
-                                          -fx-font-size: 30;
-                                                    -fx-alignment: center;
-                                                    -fx-text-alignment: center;
-                                                    -fx-pref-column-count: 3;
-                                                    -fx-pref-row-count: 3;
-                                                    -fx-border-color:black;
-                                                    -fx-border-width: 1;
-                                                    -fx-border-style: solid;
-                                                    -fx-min-height: 48;
-                                                    -fx-min-width: 48;
-                            -fx-background-color: yellow;
-                            """);
-                }
                 Label currentCell = cells.get(counter);
                 currentCell.setText(key.getText());
                 if (counter < 29) {
-                    Label nextCell = cells.get(counter + 1);
-                    nextCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
+                    Label nextCell = cells.get(counter);
+                    nextCell.setStyle(styleBlue);
                 }
                 counter++;
             }
         }
-    }
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
     }
 
     @Override
@@ -177,24 +158,9 @@ public class HelloController implements Initializable {
 
         for (int i = 0; i < 30; i++) {
             Label currentCell = cells.get(i);
-            currentCell.setStyle(currentCell.getStyle() + " -fx-background-color: yellow");
+            currentCell.setStyle(styleYellow);
         }
         counter = 0;
-        String cellStyle = cell_00.getStyle();
-        cell_00.setStyle("""
-                     -fx-font-size: 30;
-                                                            -fx-alignment: center;
-                                                            -fx-text-alignment: center;
-                                                            -fx-pref-column-count: 3;
-                                                            -fx-pref-row-count: 3;
-                                                            -fx-border-color:black;
-                                                            -fx-border-width: 1;
-                                                            -fx-border-style: solid;
-                                                            -fx-min-height: 48;
-                                                            -fx-min-width: 48;
-                                                            -fx-background-color: blue
-
-                """);
 
 
     }
