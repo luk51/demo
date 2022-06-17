@@ -19,12 +19,10 @@ public class HelloApplication extends Application {
         stage.setTitle("wordle game");
         stage.setMinWidth(1024);
         stage.setMinHeight(600);
-        logger.info("wordle gestartet");
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                logger.info("es wurde folgende taste gedrückt: " + event.getCode());
                 //event.getCode();
             }
         });

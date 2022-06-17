@@ -15,17 +15,17 @@ public class HelloController implements Initializable {
     java.util.logging.Logger logger = java.util.logging.Logger.getLogger(this.getClass().getName());
 
     static final String styleCell = """
-                    -fx-font-size: 30;
-                    -fx-alignment: center;
-                    -fx-text-alignment: center;
-                    -fx-pref-column-count: 3;
-                    -fx-pref-row-count: 3;
-                    -fx-border-color:black;
-                    -fx-border-width: 1;
-                    -fx-border-style: solid;
-                    -fx-min-height: 48;
-                    -fx-min-width: 48;
-                    """;
+            -fx-font-size: 30;
+            -fx-alignment: center;
+            -fx-text-alignment: center;
+            -fx-pref-column-count: 3;
+            -fx-pref-row-count: 3;
+            -fx-border-color:black;
+            -fx-border-width: 1;
+            -fx-border-style: solid;
+            -fx-min-height: 48;
+            -fx-min-width: 48;
+            """;
 
     private final static String styleYellow = styleCell + "-fx-background-color: yellow";
     private static final String styleBlue = styleCell + "-fx-background-color: blue";
@@ -99,42 +99,56 @@ public class HelloController implements Initializable {
     protected void onRootVBoxKeyPressed(KeyEvent key) {
 
         String keyText = key.getCode().getName();
-        logger.info("das ist keytext: " + keyText);
         if (keyText.equals("Backspace")) {
-            logger.info("es wurde backspace gedrückt");
             if (counter > 0) {
                 counter--;
+                renderColors();
+
+
             }
             Label currentCell = cells.get(counter);
-            currentCell.setText("");
+            if (currentCell != null) {
+                currentCell.setText("");
+            }
+
 
         } else if (counter < 30) {
             if (counter == 0 || counter % 5 != 0) {
                 Label currentCell = cells.get(counter);
                 currentCell.setText(key.getText());
-                if (counter < 29) {
-                    Label nextCell = cells.get(counter);
-                }
                 counter++;
+                renderColors();
+
+
             }
         }
-        renderColors();
 
 
     }
 
     private void renderColors() {
-        // render the colors
-        cells.forEach(cell -> {
-            cell.setStyle(styleYellow);
-        });
-        for (int i = 0; i < 5; i++) {
-            int toBeColoredIndex = counter - counter % 5 + i;
-            Label toBeColored = cells.get(toBeColoredIndex);
-            toBeColored.setStyle(styleLightBlue);
-        }
-        if (counter > 0) {
-            cells.get(counter - 1).setStyle(styleBlue);
+        logger.info("rendering at cellnum " + counter);
+        if (counter < 0 || counter > 30) {
+            // don't render
+        } else {
+            // yellow
+            cells.forEach(cell -> {
+                cell.setStyle(styleYellow);
+            });
+            // light blue
+            if (counter > 0) {
+                for (int i = 0; i < 5; i++) {
+                    int toBeColoredIndex = counter - counter % 5 + i;
+                    Label toBeColored = cells.get(toBeColoredIndex);
+                    if (toBeColored != null) {
+                        toBeColored.setStyle(styleLightBlue);
+                    }
+                }
+            }
+            // blue
+            if (cells.get(counter - 1) != null) {
+                cells.get(counter - 1).setStyle(styleBlue);
+            }
         }
     }
 
@@ -173,7 +187,6 @@ public class HelloController implements Initializable {
         cells.add(cell_29);
 
         counter = 0;
-        renderColors();
 
     }
 }
