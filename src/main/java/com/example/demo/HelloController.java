@@ -103,9 +103,8 @@ public class HelloController implements Initializable {
             if (counter > 0) {
                 counter--;
                 renderColors();
-
-
             }
+
             Label currentCell = cells.get(counter);
             if (currentCell != null) {
                 currentCell.setText("");
@@ -115,9 +114,11 @@ public class HelloController implements Initializable {
         } else if (counter < 30) {
             if (counter == 0 || counter % 5 != 0) {
                 Label currentCell = cells.get(counter);
-                currentCell.setText(key.getText());
-                counter++;
+                if (currentCell != null) {
+                    currentCell.setText(key.getText());
+                }
                 renderColors();
+                counter++;
 
 
             }
@@ -146,8 +147,8 @@ public class HelloController implements Initializable {
                 }
             }
             // blue
-            if (cells.get(counter - 1) != null) {
-                cells.get(counter - 1).setStyle(styleBlue);
+            if (cells.get(counter) != null) {
+                cells.get(counter).setStyle(styleBlue);
             }
         }
     }
