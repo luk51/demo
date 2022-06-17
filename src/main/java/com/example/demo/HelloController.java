@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -13,7 +12,7 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
-    java.util.logging.Logger logger =  java.util.logging.Logger.getLogger(this.getClass().getName());
+    java.util.logging.Logger logger = java.util.logging.Logger.getLogger(this.getClass().getName());
 
     @FXML
     private Label welcomeText;
@@ -82,7 +81,7 @@ public class HelloController implements Initializable {
     List<Label> cells = new ArrayList<Label>();
 
     @FXML
-    protected void onRootVBoxPressed(KeyEvent key) {
+    protected void onRootVBoxKeyPressed(KeyEvent key) {
         String keyText = key.getCode().getName();
         logger.info("das ist keytext: " + keyText);
         if (keyText.equals("Backspace")) {
@@ -109,11 +108,8 @@ public class HelloController implements Initializable {
                 currentCell.setText("");
                 currentCell.setStyle(currentCell.getStyle() + " -fx-background-color: blue");
             }
-        }
-        else {
-            if (counter < 30) {
-
-
+        } else if (counter < 30) {
+            if (counter == 0 || counter % 5 != 0) {
                 for (int i = 0; i < 30; i++) {
                     cells.get(i).setStyle("""
                                           -fx-font-size: 30;
@@ -199,7 +195,6 @@ public class HelloController implements Initializable {
                                                             -fx-background-color: blue
 
                 """);
-
 
 
     }
