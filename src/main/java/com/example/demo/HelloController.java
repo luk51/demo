@@ -117,10 +117,8 @@ public class HelloController implements Initializable {
                 if (currentCell != null) {
                     currentCell.setText(key.getText());
                 }
-                renderColors();
                 counter++;
-
-
+                renderColors();
             }
         }
 
@@ -129,27 +127,39 @@ public class HelloController implements Initializable {
 
     private void renderColors() {
         logger.info("rendering at cellnum " + counter);
-        if (counter < 0 || counter > 30) {
-            // don't render
-        } else {
-            // yellow
-            cells.forEach(cell -> {
-                cell.setStyle(styleYellow);
-            });
-            // light blue
-            if (counter > 0) {
-                for (int i = 0; i < 5; i++) {
-                    int toBeColoredIndex = counter - counter % 5 + i;
-                    Label toBeColored = cells.get(toBeColoredIndex);
-                    if (toBeColored != null) {
-                        toBeColored.setStyle(styleLightBlue);
-                    }
-                }
+        // yellow
+        cells.forEach(cell -> {
+            cell.setStyle(styleYellow);
+        });
+        // light blue
+        if (counter >= 0 && counter <= 4) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
             }
-            // blue
-            if (cells.get(counter) != null) {
-                cells.get(counter).setStyle(styleBlue);
+        } else if (counter >= 5 && counter <= 9) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
             }
+        } else if (counter >= 10 && counter <= 14) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
+            }
+        } else if (counter >= 15 && counter <= 19) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
+            }
+        } else if (counter >= 20 && counter <= 24) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
+            }
+        } else if (counter >= 25 && counter <= 29) {
+            for (int i = 0; i < 5; i++) {
+                cells.get(0 + i).setStyle(styleLightBlue);
+            }
+        }
+        // blue
+        if (cells.get(counter) != null) {
+            cells.get(counter).setStyle(styleBlue);
         }
     }
 
@@ -188,6 +198,7 @@ public class HelloController implements Initializable {
         cells.add(cell_29);
 
         counter = 0;
+        renderColors();
 
     }
 }
