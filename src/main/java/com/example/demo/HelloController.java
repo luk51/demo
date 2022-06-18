@@ -99,6 +99,7 @@ public class HelloController implements Initializable {
     protected void onRootVBoxKeyPressed(KeyEvent key) {
 
         String keyText = key.getCode().getName();
+        logger.info("keytext: " + keyText);
         if (keyText.equals("Backspace")) {
             if (counter > 0) {
                 counter--;
@@ -110,16 +111,11 @@ public class HelloController implements Initializable {
                 currentCell.setText("");
             }
 
-
         } else if (counter < 30) {
-            if (counter == 0 || counter % 5 != 0) {
-                Label currentCell = cells.get(counter);
-                if (currentCell != null) {
-                    currentCell.setText(key.getText());
-                }
-                counter++;
-                renderColors();
-            }
+            Label currentCell = cells.get(counter);
+            currentCell.setText(key.getText());
+            counter++;
+            renderColors();
         }
 
 
@@ -138,23 +134,23 @@ public class HelloController implements Initializable {
             }
         } else if (counter >= 5 && counter <= 9) {
             for (int i = 0; i < 5; i++) {
-                cells.get(0 + i).setStyle(styleLightBlue);
+                cells.get(5 + i).setStyle(styleLightBlue);
             }
         } else if (counter >= 10 && counter <= 14) {
             for (int i = 0; i < 5; i++) {
-                cells.get(0 + i).setStyle(styleLightBlue);
+                cells.get(10 + i).setStyle(styleLightBlue);
             }
         } else if (counter >= 15 && counter <= 19) {
             for (int i = 0; i < 5; i++) {
-                cells.get(0 + i).setStyle(styleLightBlue);
+                cells.get(15 + i).setStyle(styleLightBlue);
             }
         } else if (counter >= 20 && counter <= 24) {
             for (int i = 0; i < 5; i++) {
-                cells.get(0 + i).setStyle(styleLightBlue);
+                cells.get(20 + i).setStyle(styleLightBlue);
             }
         } else if (counter >= 25 && counter <= 29) {
             for (int i = 0; i < 5; i++) {
-                cells.get(0 + i).setStyle(styleLightBlue);
+                cells.get(25 + i).setStyle(styleLightBlue);
             }
         }
         // blue
