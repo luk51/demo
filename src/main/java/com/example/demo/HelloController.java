@@ -30,6 +30,7 @@ public class HelloController implements Initializable {
     private final static String styleYellow = styleCell + "-fx-background-color: yellow";
     private static final String styleBlue = styleCell + "-fx-background-color: blue";
     private static final String styleLightBlue = styleCell + "-fx-background-color: aqua";
+    private static final String getStyleCellGrey = styleCell + "-fx-background-color: grey";
 
     @FXML
     private Label cell_00;
@@ -101,10 +102,11 @@ public class HelloController implements Initializable {
 
         String keyText = key.getCode().getName();
         logger.info("keytext: " + keyText);
-        if (keyText.equals("Enter")) {
-            if (counter % 5 == 0) {
+        if (keyText.equals("Enter") && freeze) {
                 freeze = false;
-            }
+                for (int i = counter - 5; i < counter; i++) {
+                    cells.get(i).setStyle(getStyleCellGrey);
+                }
         }
         else if (keyText.equals("Backspace")) {
             if (counter > 0 && counter % 5 != 0 || counter > 0 && freeze) {
