@@ -94,16 +94,23 @@ public class HelloController implements Initializable {
 
     int counter = 0;
     List<Label> cells = new ArrayList<Label>();
+    boolean freeze;
 
     @FXML
     protected void onRootVBoxKeyPressed(KeyEvent key) {
 
         String keyText = key.getCode().getName();
         logger.info("keytext: " + keyText);
-        if (keyText.equals("Backspace")) {
-            if (counter > 0) {
+        if (keyText.equals("Enter")) {
+            if (counter % 5 == 0) {
+                freeze = false;
+            }
+        }
+        else if (keyText.equals("Backspace")) {
+            if (counter > 0 && counter % 5 != 0 || counter > 0 && freeze) {
                 counter--;
                 renderColors();
+                freeze = false;
             }
 
             Label currentCell = cells.get(counter);
@@ -111,11 +118,14 @@ public class HelloController implements Initializable {
                 currentCell.setText("");
             }
 
-        } else if (counter < 30) {
+        } else if (counter < 30 && !freeze) {
             Label currentCell = cells.get(counter);
             currentCell.setText(key.getText());
             counter++;
             renderColors();
+            if (counter > 0 && counter % 5 == 0) {
+                freeze = true;
+            }
         }
 
 
