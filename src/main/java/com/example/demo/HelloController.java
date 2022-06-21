@@ -166,8 +166,12 @@ public class HelloController implements Initializable {
             }
         }
         // blue
-        if (cells.get(counter) != null) {
+        try {
             cells.get(counter).setStyle(styleBlue);
+        }
+        catch (IndexOutOfBoundsException indexOutOfBoundsException) {
+            logger.info("there is no label with that number " + counter);
+            logger.info("exception: " + indexOutOfBoundsException.toString());
         }
     }
 
