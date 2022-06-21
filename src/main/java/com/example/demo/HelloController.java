@@ -30,7 +30,11 @@ public class HelloController implements Initializable {
     private final static String styleYellow = styleCell + "-fx-background-color: yellow";
     private static final String styleBlue = styleCell + "-fx-background-color: blue";
     private static final String styleLightBlue = styleCell + "-fx-background-color: aqua";
+
     private static final String getStyleCellGrey = styleCell + "-fx-background-color: grey";
+    private static final String getStyleCellGreen = styleCell + "-fx-background-color: green";
+    private static final String getStyleCellRed = styleCell + "-fx-background-color: red";
+
 
     @FXML
     private Label cell_00;
@@ -96,6 +100,7 @@ public class HelloController implements Initializable {
     int counter = 0;
     List<Label> cells = new ArrayList<Label>();
     boolean freeze;
+    String word = "hello";
 
     @FXML
     protected void onRootVBoxKeyPressed(KeyEvent key) {
@@ -211,6 +216,5 @@ public class HelloController implements Initializable {
 
         counter = 0;
         renderColors();
-
     }
 }
